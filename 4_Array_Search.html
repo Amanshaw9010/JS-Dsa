@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function Search() {
+
+
+            let value = document.getElementById('value').value;
+            value = parseInt(value);
+            let data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+            let index = undefined;
+
+            for (let i = 0; i < data.length; i++) {
+                if (data[i] == value) {
+                    index = i;
+                    console.log(`Index value is ${index} and item is ${data[i]}`);
+                    break
+                }
+                if (data[i] != value) {
+                    console.log("This data is not exist in this array");
+                }
+            }
+            // let aman = data.indexOf(value);  // indexOf method is directally find the element index number
+            // console.log(aman);
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>In this video we learn how to search the element in array.</h1>
+
+
+    <input type="text" id="value">
+    <button onclick="Search()">Search Element</button>
+
+
+
+</body>
+
+</html>

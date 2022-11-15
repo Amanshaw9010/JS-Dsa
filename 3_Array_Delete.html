@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // let data = [30, 20, 45, 76, 10, 80];
+        // let position = 2;
+
+        // for (let i = position; i < data.length - 1; i++) {
+        //     data[i] = data[i + 1];
+        // }
+        // data.length = data.length-1;
+        // console.log(data);
+
+
+
+
+        function removeEl() {
+            let value = document.getElementById('value').value;
+            value = parseInt(value);
+            let data = [30, 20, 45, 76, 10, 80];
+            let position = value;
+
+            for (let i = position; i < data.length; i++) {
+                data[i] = data[i + 1];
+            }
+            data.length = data.length - 1;
+            let data1 = data.splice(position, 1);
+            // data.splice(2, 1);    // SPLICE method is directally delete the element in any position. here 2 is define the position and 1 is define the how much element you delete from the 2 position if you type 1 then 2 position element is delete but you type 2 then second or third element is delete.
+            console.log(data);
+
+
+
+            // let value = document.getElementById('value').value;
+            // value = parseInt(value);
+            // let data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+            // let position = value;
+
+            // // for (let i = position; i < data.length; i++) {
+            // //     data[i] = data[i + 1];
+            // //     console.log(data);
+            // // }
+            // // data.length = data.length - 1;
+            // console.log(data);
+
+
+
+
+        }
+
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Delete data in Array through loop and If,Else condition. </h1>
+    <br><br><br><br>
+
+
+    <input type="text" id="value" placeholder="Position">
+    <button onclick="removeEl()">Remove</button>
+
+
+</body>
+
+</html>
